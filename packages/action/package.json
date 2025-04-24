@@ -1,0 +1,32 @@
+{
+  "name": "@gitslither/action",
+  "version": "1.0.0",
+  "description": "GitHub Action for GitSlither",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --minify",
+    "dev": "tsup src/index.ts --format esm,cjs --watch",
+    "clean": "rimraf dist",
+    "lint": "oxlint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@actions/toolkit": "^2.0.0",
+    "@gitslither/core": "workspace:*",
+    "@gitslither/data": "workspace:*",
+    "@gitslither/algorithms": "workspace:*",
+    "@gitslither/renderers": "workspace:*",
+    "@gitslither/utils": "workspace:*",
+    "valibot": "^0.28.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "vitest": "^1.3.0",
+    "rimraf": "^5.0.5"
+  }
+}

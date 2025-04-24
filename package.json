@@ -1,0 +1,33 @@
+{
+  "name": "gitslither",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transform GitHub contributions into engaging snake animations",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "dprint fmt",
+    "dev": "turbo run dev",
+    "clean": "turbo run clean",
+    "release": "changeset publish",
+    "version": "changeset version",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "dprint": "^0.45.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "oxlint": "^0.2.0",
+    "turbo": "^2.1.3",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "bun": ">=2.0.0",
+    "node": ">=20.0.0"
+  }
+}
